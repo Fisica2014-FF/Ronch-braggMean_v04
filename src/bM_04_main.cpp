@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
 		as->endJob();
 	}
 
-	//Clear memory. We would better use some xXx__s_m_a_r_t~~~p_o_i_n_t_e_r_s_420_xXx;
+	//Clear memory. We would better use some smart pointer;
 	for (auto& as : aList) {
 		delete as;
 	}
