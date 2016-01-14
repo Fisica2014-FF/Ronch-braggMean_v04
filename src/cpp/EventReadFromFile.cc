@@ -1,11 +1,13 @@
-#include "../EventReadFromFile.h"
+#include <fstream>
 
+#include "../EventReadFromFile.h"
+#include "../Event.h"
 
 using namespace std;
 
 // read data from file "name"
 EventReadFromFile::EventReadFromFile( const string& name ) {
-  file = new ifstream( name.c_str() );
+  file = new ifstream( name );
 }
 
 
@@ -26,19 +28,19 @@ const Event* EventReadFromFile::readFile() {
 	Event* ev;
 	int event_ID;
 	// try to read input file
-	if (file >> event_ID)
+	if (*file >> event_ID)
 		ev = new Event(event_ID);
 	else
 		return nullptr;
 
 	// read number of points
 	unsigned numpoints;
-	file >> numpoints;
+	*file >> numpoints;
 
 	// read and store energy loss
 	int energy_loss;
 	for (unsigned i = 0; i < numpoints; ++i) {
-		file >> energy_loss;
+		*file >> energy_loss;
 		ev->add(energy_loss);
 	}
 

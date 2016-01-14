@@ -1,4 +1,7 @@
-... include header files ...
+#include <iostream>
+
+#include "../EventDump.h"
+#include "../Event.h"
 
 using namespace std;
 
@@ -38,10 +41,11 @@ void EventDump::process( const Event& ev ) {
 		// Anyway, since logic operators like && (=and) uses short-circuit evalutation,
 		// it's better to put them in order of probability to have different values during
 		// the cycle.
-		if (i % 12 == 0 and i != 0) {
+		if (i % 12 == 0 and i != 0 and i != ev.dataSize()-1) {
 			cout << endl;
 		}
 	}
+	cout << endl << endl;
 	return;
 
 }

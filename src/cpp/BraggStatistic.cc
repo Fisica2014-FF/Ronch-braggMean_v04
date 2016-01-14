@@ -7,8 +7,8 @@
 
 BraggStatistic::BraggStatistic(int minEnergy, int maxEnergy) :
 		MIN_ENERGY_(minEnergy), MAX_ENERGY_(maxEnergy), number_of_events_(0), sumenergies(
-				Event::maxSize(), 0), sumsquares((int) Event::maxSize(), 0), meanenergies(
-				Event::maxSize(), 0), rmsenergies(Event::maxSize(), 0) {
+				Event::minSize(), 0), sumsquares((int) Event::minSize(), 0), meanenergies(
+				Event::minSize(), 0), rmsenergies(Event::minSize(), 0) {
 
 }
 
