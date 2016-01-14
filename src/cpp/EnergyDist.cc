@@ -7,6 +7,8 @@
 
 using namespace std;
 
+// We could reserve some space for braggStat if it were very big, maybe with a
+// parameter of the constructor of energyDist
 EnergyDist::EnergyDist() {
 }
 
@@ -49,6 +51,8 @@ void EnergyDist::endJob() {
 			printf("%4f +/- %4f ", stat->eMean()[j], stat->eRMS()[j]);
 			cout << endl;
 		}
+		cout << "There are " << stat->nEvents() << " events in this range" << endl;
+		cout << endl;
 	}
 
 	return;

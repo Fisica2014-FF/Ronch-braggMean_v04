@@ -6,8 +6,8 @@
 using namespace std;
 
 // read data from file "name"
-EventReadFromFile::EventReadFromFile( const string& name ) {
-  file = new ifstream( name );
+EventReadFromFile::EventReadFromFile( const string& name ) : file(new ifstream( name )) {
+
 }
 
 
