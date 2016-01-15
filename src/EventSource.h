@@ -5,18 +5,18 @@ class Event;
 
 class EventSource {
 
- public:
+public:
 
-  EventSource();
-  virtual ~EventSource();
+	EventSource();
+	virtual ~EventSource();
 
-  // get an event
-  virtual const Event* get() = 0;
+	// get an event
+	virtual const Event* get() = 0;
 
- private:
+private:
 
-  EventSource           ( const EventSource& x );
-  EventSource& operator=( const EventSource& x );
+	EventSource(const EventSource& x);
+	EventSource& operator=(const EventSource& x);
 
 };
 

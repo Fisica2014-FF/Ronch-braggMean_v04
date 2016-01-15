@@ -51,7 +51,8 @@ void EnergyDist::endJob() {
 			printf("%4f +/- %4f ", stat->eMean()[j], stat->eRMS()[j]);
 			cout << endl;
 		}
-		cout << "There are " << stat->nEvents() << " events in this range" << endl;
+		cout << "There are " << stat->nEvents() << " events in this range"
+				<< endl;
 		cout << endl;
 	}
 

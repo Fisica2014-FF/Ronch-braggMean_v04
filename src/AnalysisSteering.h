@@ -5,22 +5,22 @@ class Event;
 
 class AnalysisSteering {
 
- public:
+public:
 
-  AnalysisSteering();
-  virtual ~AnalysisSteering();
+	AnalysisSteering();
+	virtual ~AnalysisSteering();
 
-  // function to be called at execution start
-  virtual void beginJob() = 0;
-  // function to be called at execution end
-  virtual void   endJob() = 0;
-  // function to be called for each event
-  virtual void process( const Event& ev ) = 0;
+	// function to be called at execution start
+	virtual void beginJob() = 0;
+	// function to be called at execution end
+	virtual void endJob() = 0;
+	// function to be called for each event
+	virtual void process(const Event& ev) = 0;
 
- private:
+private:
 
-  AnalysisSteering           ( const AnalysisSteering& x );
-  AnalysisSteering& operator=( const AnalysisSteering& x );
+	AnalysisSteering(const AnalysisSteering& x);
+	AnalysisSteering& operator=(const AnalysisSteering& x);
 
 };
 

@@ -11,26 +11,25 @@
 
 class EnergyDist: public AnalysisSteering {
 
- public:
+public:
 
-  EnergyDist();
-  virtual ~EnergyDist();
+	EnergyDist();
+	virtual ~EnergyDist();
 
-  // function to be called at execution start
-  virtual void beginJob();
-  // function to be called at execution end
-  virtual void   endJob();
-  // function to be called for each event
-  virtual void process( const Event& ev );
+	// function to be called at execution start
+	virtual void beginJob();
+	// function to be called at execution end
+	virtual void endJob();
+	// function to be called for each event
+	virtual void process(const Event& ev);
 
-  EnergyDist           ( const EnergyDist& x ) = delete;
-  EnergyDist& operator=( const EnergyDist& x ) = delete;
+	EnergyDist(const EnergyDist& x) = delete;
+	EnergyDist& operator=(const EnergyDist& x) = delete;
 
- private:
+private:
 
-  // set of Bragg curves for different total energies
-  std::vector<BraggStatistic*> braggStat;
-
+	// set of Bragg curves for different total energies
+	std::vector<BraggStatistic*> braggStat;
 
 };
 

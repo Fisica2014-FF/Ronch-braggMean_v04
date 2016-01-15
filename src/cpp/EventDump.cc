@@ -8,25 +8,21 @@ using namespace std;
 EventDump::EventDump() {
 }
 
-
 EventDump::~EventDump() {
 }
 
-
 // function to be called at execution start
 void EventDump::beginJob() {
-  return;
+	return;
 }
-
 
 // function to be called at execution end
 void EventDump::endJob() {
-  return;
+	return;
 }
 
-
 // function to be called for each event
-void EventDump::process( const Event& ev ) {
+void EventDump::process(const Event& ev) {
 
 	using namespace std;
 
@@ -41,7 +37,7 @@ void EventDump::process( const Event& ev ) {
 		// Anyway, since logic operators like && (=and) uses short-circuit evalutation,
 		// it's better to put them in order of probability to have different values during
 		// the cycle.
-		if (i % 12 == 0 and i != 0 and i != ev.dataSize()-1) {
+		if (i % 12 == 0 and i != 0 and i != ev.dataSize() - 1) {
 			cout << endl;
 		}
 	}

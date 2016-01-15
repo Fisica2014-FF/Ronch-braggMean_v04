@@ -48,12 +48,11 @@ int main(int argc, char* argv[]) {
 		as->endJob();
 	}
 
-	//Clear memory. We would better use some smart pointer;
+	//Clear memory
 	for (auto& as : aList) {
 		delete as;
 	}
 	delete es;
-
 
 	return 0;
 }
