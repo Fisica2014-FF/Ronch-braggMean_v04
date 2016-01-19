@@ -8,7 +8,10 @@ using namespace std;
 // read data from file "name"
 EventReadFromFile::EventReadFromFile(const string& name) :
 		file(new ifstream(name)) {
-
+	if (!(*file)) {
+		cerr << "[ERROR] File not opened" << endl;
+		throw -1;
+	}
 }
 
 EventReadFromFile::~EventReadFromFile() {
